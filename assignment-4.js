@@ -28,6 +28,9 @@ function pandaCost(shingara, somucha, jilapi) {
   const shingaraPrice = 7;
   const somuchaPrice = 10;
   const jilapiPrice = 15;
+  let totalShingaraPrice = 0;
+  let totalSomuchaPrice = 0;
+  let totalJilapiPrice = 0;
       if (typeof shingara != 'number') {
           const error = 'please input number value only' 
           return error;       
@@ -35,6 +38,28 @@ function pandaCost(shingara, somucha, jilapi) {
       const error = 'please give positive value only';
       return error;        
       }else{
-        
+        totalShingaraPrice = shingara * shingaraPrice;
       }
+      if (typeof somucha != 'number') {
+          const error = 'please input number value only' 
+          return error;       
+      }else if(somucha<0){
+      const error = 'please give positive value only';
+      return error;        
+      }else{
+         totalSomuchaPrice = somucha * somuchaPrice;
+      }
+      if (typeof jilapi != 'number') {
+          const error = 'please input number value only' 
+          return error;       
+      }else if(jilapi<0){
+      const error = 'please give positive value only';
+      return error;        
+      }else{
+         totalJilapiPrice = jilapi * jilapiPrice;
+      }
+      let total = totalShingaraPrice+totalSomuchaPrice+totalJilapiPrice;
+      return total;
 }
+
+
