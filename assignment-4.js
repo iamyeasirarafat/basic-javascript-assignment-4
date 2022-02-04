@@ -100,3 +100,14 @@ return error;
 }
 }
 
+
+// ৪. [ ফাংশন নেম দিতে হবে oddFriend]: বিস্তারিত ভিডিওতে দেখো। 
+
+function oddFriend(friends) {
+    for (const friend of friends) {
+      if(friend.length % 2 !=0){
+        let oddFriendName = friend;
+        return oddFriendName;
+      }
+    }
+}
